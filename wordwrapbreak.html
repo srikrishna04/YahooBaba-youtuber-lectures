@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordwrap and wordbreak</title>
+    <style>
+        .box{
+            width: 300px;
+            border: 2px solid red;
+            /* word-wrap: normal; */
+            word-wrap: break-word;
+            /* word-break: keep-all; */
+            word-break: break-all;
+        }
+        .overflow{
+            width:400px;
+            white-space: nowrap;
+            border: 2px solid;
+            overflow: hidden;
+            text-overflow: clip;
+            text-overflow: ellipsis;
+            text-overflow: " etc";
+        }
+        .write{
+            width: 600px;
+            border: 1px solid green;
+            writing-mode: horizontal-tb;
+            writing-mode: vertical-lr;
+            writing-mode: vertical-rl;
+            writing-mode: sideways-lr;
+            writing-mode: sideways-rl;
+            /* text-orientation: mixed; */
+            text-orientation: upright;
+        }
+        
+        span{
+            border: 1px solid red;
+            background-image: linear-gradient(to right, orange, yellow);
+            -webkit-box-direction-break: clone;
+            box-decoration-break: clone;
+            line-height: 50px;
+            background-color: wheat;
+        }
+    </style>
+</head>
+<body>
+    <h1>Css word-wrap, word-break and text-overflow and writing-mode, text-orientatin and box-decoration</h1>
+    <div class="box">Lorem, ipsum dolor sit amet consecteturiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii adipisicing elit. Magnam ut eum nam. Eos, soluta? Laborum accusamus voluptatem <b>inciduntwordbreak</b> sed non tempore eius, quisquam laboriosam! Nihil labore et nulla nam autem distinctio nesciunt at? Possimus doloribus fugit autem, vero voluptate eligendi consequatur debitis quae eum aperiam. Quos, quidem quisquam nulla error cum adipisci praesentium earum quae provident voluptas voluptatem assumenda molestiae? Reiciendis corporis iure, voluptate distinctio et fuga cum ducimus repellendus tempore nesciunt, non tenetur minima eos velit porro ipsa omnis. Veniam tempora sint laborum repellendus aspernatur magni porro, dolorem quaerat sed. Cumque voluptate, incidunt ipsum assumenda commodi necessitatibus vitae modi mollitia velit deserunt ratione, magni quam itaque sed expedita. Ducimus odit voluptate mollitia, incidunt eaque explicabo aperiam voluptas velit illo.</div>
+    <div class="overflow">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo aperiam quaerat unde sapiente blanditiis ipsa, harum qui reprehenderit incidunt rerum recusandae. Veritatis vitae itaque placeat sed iusto, laborum modi ad.</div>
+    <div class="write">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, odit. Saepe temporibus delectus iure, eum esse nulla architecto libero doloribus quia quaerat reiciendis inventore exercitationem ratione accusantium cumque odio quae repellendus. Delectus saepe porro esse, blanditiis nihil quod ad! Quas enim porro sunt, quidem minima similique deleniti optio, tempore, officia totam voluptas ea itaque ducimus pariatur laboriosam ad voluptate debitis et. Facilis, unde nisi! Nulla saepe natus officia aperiam est iure eaque repellendus ratione alias porro assumenda, suscipit corporis optio rerum dolor ex distinctio fugit, ad dignissimos quaerat amet adipisci odio explicabo! Hic similique, culpa rem ea cum laudantium unde quia dolore nisi suscipit possimus quisquam assumenda quas. Voluptatem vero hic, molestias totam veritatis neque vitae, ipsa earum, minus consectetur ipsum! Dolores fugit tempore sequi.</div>
+    <span>Lorem ipsum dolor<br> sit amet consectetur<br> adipisicing elit. Esse<br>, odit. Saepe temporibus delectus<br> iure, eum esse nulla architec</span>
+</body>
+</html>

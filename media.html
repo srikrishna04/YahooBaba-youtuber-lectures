@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="color-scheme" content="dark"> -->
+    <title>Media Screens</title>
+    <style>
+        /* body{
+            background-color: blue;
+        } */
+        /* @media (prefers-color-scheme: light){
+            body{
+                background-color: aqua;
+            }
+        }
+        @media (prefers-color-scheme: dark){
+            body{
+                background-color: cornsilk;
+            }
+        } */
+        /* moretools -> rendering -> change */
+        /* @media (display-mode: fullscreen) {
+            h1{
+                color: red;
+            }
+        }
+        @media (display-mode: browser) {
+            h1{
+                color: orange;
+            }
+        }
+        @media (display-mode: minimal-ul){
+            h1{
+                color: green;
+            }
+        } */
+        /* threedots moretools createshortcut */
+        #box{
+            width: 500px;
+            height: 400px;
+            border: 1px solid red;
+        }
+        #box:fullscreen{
+            background-color: aquamarine;
+        }
+        #box:not(:fullscreen){
+            background-color: rgb(0, 42, 255);
+        }
+        @supports (display: flex){
+            body{
+                background-color: aqua;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <h1>media and meta</h1>
+    </div>
+    <br>
+    <button onclick="document.getElementById('box').requestFullscreen()">Go to fullscreen</button>
+</body>
+</html>

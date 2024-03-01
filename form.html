@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+    input,textarea{
+       font-size: 20px;
+       caret-color: rgb(8, 241, 8);
+    }
+    input:placeholder-shown{
+        border: 5px solid red;
+    }
+    /* only for input and text-area */
+    input[type=file]::file-selector-button{
+        background-color: violet;
+        border: 3px solid darkviolet;
+        padding: 2px 5px;
+        border-radius: 4px;
+        margin: 12px 5px;
+    }
+    input[type=checkbox],
+    input[type=radio]{
+        width: 15px;
+        height: 15px;
+        accent-color: lime;
+    }
+    .form{
+        height: 30vh;
+        background-color: aqua;
+        padding: 15px;
+    }
+    .form:focus-within{
+        background-color: #ffeaa7;
+    }
+    .form>div:focus-within{
+        background-color: yellowgreen;
+    }
+    .scroll{
+        width: 200px;
+        height: 300px;
+        border: 1px solid black;
+        margin: 10px 20px;
+        overflow: auto;
+    }
+    .scroll::-webkit-scrollbar{
+        width: 20px;
+    }
+    .scroll::-webkit-scrollbar-track{
+        background-color: #f5f5f5;
+        box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        border-radius: 10px;
+    }
+    .scroll::-webkit-scrollbar-thumb{
+        border-radius: 10px;
+        box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        background: linear-gradient(red,yellow);
+    }
+    .scroll::-webkit-scrollbar-corner{
+        background: linear-gradient(red, yellow);
+    }
+    .parent{
+        width: 400px;
+        margin: 50px 20px;
+        border: 2px solid black;
+        display: flow-root;
+    }
+    .child{
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        float: left;
+    }
+    /* overflow:auto or clear used */
+    </style>
+  
+</head>
+<body>
+    <div class="form">
+    <div class="a">
+    <label for="name">Name: </label>
+    <input type="text" id="name" placeholder="enter your name"><br>
+    </div>
+    <div class="b">
+    <label for="uploadfile">Upload File:</label>
+    <input type="file" id="uploadfile"><br>
+    </div>
+   <div class="c">
+    Hobbies :
+    <input type="checkbox" name="hobby">music
+    <input type="checkbox" name="hobby">games
+    <input type="checkbox" name="hobby">learning <br>
+   </div>
+   <div class="d">
+    Gender :
+    <input type="radio" name="gender">Male
+    <input type="radio" name="gender">Female
+   </div>
+    </div>
+    <div class="scroll">
+        <img src="./img/goa1.jpg" alt="">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto, quibusdam blanditiis soluta deserunt nisi assumenda recusandae! Vitae, ab earum? Deleniti earum expedita, asperiores amet odio vero? Placeat unde repellat magnam! Necessitatibus, dolores velit distinctio esse minima saepe numquam voluptatum possimus sed fuga sunt cupiditate molestias quidem cumque! Officia quas a repudiandae provident temporibus debitis vitae sit quis deleniti amet, dolores laudantium velit dolore deserunt voluptates quos omnis assumenda rerum ratione ab architecto aspernatur accusamus voluptatem! Quibusdam assumenda laboriosam dolores cupiditate reiciendis. Excepturi neque quas esse odio tempora id, dolorem, itaque impedit voluptatum ea praesentium vitae, et cupiditate eveniet nulla numquam tempore vero. Non itaque consectetur distinctio, magnam esse, praesentium mollitia, provident impedit tenetur vel aut perferendis! Aliquam quo dolore dicta nesciunt esse laudantium magnam cum exercitationem delectus animi. Iure libero numquam quo animi incidunt esse placeat quos, quasi voluptas impedit ut dolorem delectus quibusdam eligendi, possimus laboriosam voluptates maiores repellat amet at ullam? Accusantium ducimus consectetur corporis hic inventore rerum velit nam iusto, obcaecati adipisci numquam possimus harum voluptatum nobis dolore minima recusandae iste! Possimus dicta perferendis consequuntur ab ex cupiditate quasi vero alias harum laudantium beatae ipsam accusantium fugit a dolorum natus itaque perspiciatis numquam saepe, praesentium impedit consequatur?</div>
+    <div class="parent">
+        <div class="child"></div>
+    </div>
+</body>
+</html>

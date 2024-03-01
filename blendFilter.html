@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS background blend mode</title>
+    <style>
+        div{
+            display: inline-block;
+        }
+        .box{
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            /* background-image: url(./img/nature1.jpg), url(./img/goa1.jpg); */
+            background-image: linear-gradient(to right, red, yellow), url("./img/nature1.jpg");
+            background-position:center 20%;
+            /* background-blend-mode: normal; */
+            /* background-blend-mode: screen; */
+            /* background-blend-mode: overlay; */
+            /* background-blend-mode: darken; */
+            /* background-blend-mode: hard-light; */
+            /* background-blend-mode: difference; */
+            background-blend-mode: saturation;
+        }
+        .box1{
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            background-image: url(./img/goa2.jpg);
+            background-position: bottom;
+        }
+        .box1 h2{
+            background-color: red;
+            text-align: center;
+            margin-top: 130px;
+            font-size: 40px;
+            /* mix-blend-mode: overlay; */
+            /* mix-blend-mode: multiply; */
+            mix-blend-mode: color-dodge;
+            /* mix-blend-mode: difference; */
+            /* mix-blend-mode: hue; */
+            /* mix-blend-mode: color; */
+        }
+        .color{
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            /* background-color: red; */
+            background-image: linear-gradient(to right, red, yellow);
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            /* mix-blend-mode: color; */
+            mix-blend-mode: multiply;
+        }
+        .text{
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+        }
+        .text h2{
+            font-size: 40px;
+        }
+        .text .first{
+            color: green;
+        }
+        .text .second{
+            color: gold;
+            margin-top: -60px;
+            mix-blend-mode: difference;
+        }
+        .filter img{
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            /* filter: blur(20px); */
+            filter: brightness(200%); /*default 100% */
+            filter: brightness(0%);
+            filter: contrast(60%);/*increases darkness near to 0*/
+            filter: drop-shadow(5px 5px 10px red);
+            filter: grayscale(80%); /*default 0 */
+            filter: hue-rotate(100deg); /*0 - 360*/
+            filter: invert(80%); /*upto 100 gray*/
+            filter: opacity(50%);
+            filter: sepia(20%); /* upto 100 rethi*/
+            filter: saturate(300%); /*increase color*/
+        }
+        .backdrop-filter{
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            background: url(./img/nature3.jpg) no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .inner{
+            width: 150px;
+            height: 150px;
+            border-radius: 4px;
+            border: 1px solid white;
+            /* background-color: rgba(255,255,255,0.4);
+            backdrop-filter: blur(2px); */
+            backdrop-filter: brightness(200%);
+            backdrop-filter: contrast(250%);
+            backdrop-filter: hue-rotate(200deg);
+            backdrop-filter: invert(90%);
+            backdrop-filter: sepia(90%);
+            backdrop-filter: saturate(230%); 
+        }
+        .inner:hover{
+            backdrop-filter: blur(2px) sepia(80%);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>Background blend mode</h2>
+    </div>
+    <div class="box1">
+        <h2>mix blend mode</h2>
+    </div>
+    <div class="color">
+        <img src="./img/goa1.jpg" alt="">
+    </div>
+    <div class="text">
+        <h2 class="first">Mix blend mode</h2>
+        <h2 class="second">Mix blend mode</h2>
+    </div>
+    <div class="filter">
+        <img src="./img/build1.jpg" alt="" >
+    </div>
+    <div class="backdrop-filter">
+        <div class="inner"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+/* p{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 25px;
+}
+div{
+    break-after: page;
+} *//*first method*/
+
+/*third method for taking sheet from other css print file into css stylesheet file instead of first method link 
+ @import "print.css" print; in css stylesheet
+ if same property override in css stylesheet make printcss file property !important*/
+p{
+    color: blue;
+}
+@media screen {
+    nav{
+        margin: 5em;
+    }
+    h2{
+        color:orange;
+    }
+    
+}
+@media print {
+    nav{
+        display: none;
+    }
+    a[href]::after{
+        content: "(" attr(href) ")";
+    }
+    h2{
+        color: green;
+    }
+    .container{
+        width:auto;
+        font-size: 20px;
+    } /*only use if aside used*/
+    /* only @page for margin and size use inch,cm,% */
+    @page :first{
+        margin:30% 0%;
+        /* size: landscape; */
+    }
+    @page :right{
+        margin-left: 20%;
+    }
+    @page :left{
+        margin-right: 20%;
+    }
+    /* @page{
+        margin: 1in 0.5in;
+    } */
+    @page{
+        /* size: portrait; */
+        /* size: 3in 8in; */
+        size: A4 portrait;
+    }
+    h2{
+        /* break-after: page; */
+        break-before: page;
+    }
+    div.cont{
+        break-before: page;
+        break-after: page;
+    }
+    table{
+        /* break-inside: page; */
+        break-inside: avoid;
+    }
+
+
+}
+
